@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Personal portfolio showcasing projects, skills and contact info." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Your Name</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Hi, I'm <span class="accent">Your Name</span></h1>
+          <p class="lead">A student & developer building clean, accessible web experiences.</p>
+          <p>
+            <a class="btn" href="#projects">See my work</a>
+            <a class="btn ghost" href="/resume.pdf" download>Download Resume</a>
+          </p>
+        </div>
+        <div class="hero-card">
+          <img alt="Portrait" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=400&q=80" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About</h2>
+      <p>
+        I am a passionate developer with experience in building web applications, learning cloud deployment (AWS EC2), and solving problems with pragmatic code. I enjoy collaborating on open-source projects and improving user experiences.
+      </p>
+      <img class="about-img" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80" alt="Coding desk" />
+    </section>
+
+    <section id="projects" class="container projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="Project 1 screenshot" />
+          <div class="card-body">
+            <h3>Portfolio Website</h3>
+            <p>A modern responsive portfolio website built using HTML, CSS, and deployed on AWS EC2.</p>
+            <p class="card-links">
+              <a href="#">Live</a>
+              <a href="#">Code</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80" alt="Project 2 screenshot" />
+          <div class="card-body">
+            <h3>Task Manager App</h3>
+            <p>A full-stack web app to manage daily tasks, built with Node.js and MongoDB.</p>
+            <p class="card-links">
+              <a href="#">Live</a>
+              <a href="#">Code</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1581092335071-7a5a5c0f1f2a?auto=format&fit=crop&w=800&q=80" alt="Project 3 screenshot" />
+          <div class="card-body">
+            <h3>Data Visualization Dashboard</h3>
+            <p>An interactive dashboard using React and D3.js for visualizing large datasets.</p>
+            <p class="card-links">
+              <a href="#">Live</a>
+              <a href="#">Code</a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="container skills">
+      <h2>Skills</h2>
+      <div class="skill-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">AWS (EC2)</div>
+        <div class="skill">Git</div>
+      </div>
+      <img class="skills-img" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80" alt="Tech workspace" />
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>Interested in collaborating or have a question? Reach out:</p>
+      <div class="contact-grid">
+        <form class="contact-form" action="mailto:your.email@example.com" method="post" enctype="text/plain">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <p>
+            <button class="btn" type="submit">Send</button>
+          </p>
+        </form>
+
+        <div class="contact-info">
+          <p><strong>Email:</strong> your.email@example.com</p>
+          <p><strong>Location:</strong> City, Country</p>
+          <p><strong>LinkedIn:</strong> <a href="#">your-linkedin</a></p>
+          <p><strong>GitHub:</strong> <a href="#">your-github</a></p>
+        </div>
+      </div>
+      <img class="contact-img" src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1000&q=80" alt="Contact workspace" />
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name. Built with ❤️.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
